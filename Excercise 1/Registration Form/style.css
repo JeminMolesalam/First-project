@@ -1,0 +1,35 @@
+/* For Radio Button */
+.form-check {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+/* For All Input Controls */
+.form-control,
+.form-check-input,
+textarea {
+    border-radius: 12px; 
+}
+
+body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f0f0f0; 
+    /* width: 100%;  */
+}
+
+#myform {
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #ffffff; 
+}
+
+    
+

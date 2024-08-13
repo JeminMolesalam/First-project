@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- Accordin Start -->
+            <div id="formval">
+            <form id="myform">
+                <div
+                    style="display: flex; justify-content: center; margin-top: 30px; color: white; background: linear-gradient(to right, #007bff, #00c7ff); border-radius: 20px;">
+                    <h3>Employee Registration Form</h3>
+                </div>
+                <div class="accordion" id="accordionExample" style="margin-top: 30px;">
+
+                    <!-- ==================== -->
+                    <!-- First Accordin Start -->
+                    <!-- =================== -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border-radius: 100px;">
+                                <div>Person Details (Please Use Block Letters)</div>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+
+                            <!-- Person Detail Section Start -->
+                            <div class="container-fluid" style="margin:10px;">
+                                <div class="row">
+
+                                    <!-- ==================================== -->
+                                    <!-- First Col Section Start (Person Details)-->
+                                    <div class="col">
+
+                                        <!-- First Name -->
+                                        <div class="col-md-12">
+                                            <label for="lblfname">First Name:-</label>
+                                            <input type="text" class="form-control" id="txtfname"
+                                               required="required" placeholder="Enter First Name" data-errmessage="Please Enter First Name" 
+                                               data-character="character" charmessage="First Name should contain only letters">
+                                            <span id="chkfname" style="color: red;"></span>
+                                        </div>
+
+                                        <!-- Date Of Birth -->
+                                        <div class="col-md-12" style="padding-top: 20px;">
+                                            <label for="lbldob">Date of Birth:-</label>
+                                            <input type="date" class="form-control" id="caldob" required="required" 
+                                            data-errmessage="Please Select Date Of Birth" data-calender="calender" calmessage="Please Select Date Of Birth">
+                                            <span id="chkdob" style="color: red;"></span>
+                                        </div>
+
+                                        <!-- Address -->
+                                        <div style="padding-top: 20px;">
+                                            <div class="form-group">
+                                                <label for="lbladdress">Address:-</label>
+                                                <textarea class="form-control" id="txtaddress" rows="3"
+                                                    placeholder="Enter Address" required="required" data-errmessage="Please Enter Address"></textarea>
+                                                <span id="chkaddress" style="color: red;"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Subrub -->
+                                        <div class="col-md-12" style="padding-top: 25px;">
+                                            <label for="lblsubrub">Subrub:-</label>
+                                            <input type="text" class="form-control" id="txtsubrb"
+                                                placeholder="Enter Subrub" required="required" data-errmessage="Please Enter Sub-Resident">
+                                            <span id="chksubrub" style="color: red;"></span>
+                                        </div>
+
+                                    </div>
+                                    <!-- First Col Section End (Person Details) -->
+                                    <!-- ===================================== -->
+
+
+                                    <!-- ===================================== -->
+                                    <!-- Second Col Section Start (Person Details)-->
+                                    <div class="col">
+
+                                        <!-- Last Name -->
+                                        <div class="col-md-12">
+                                            <label for="lbllname">Last Name:-</label>
+                                            <input type="text" class="form-control" id="txtlname"
+                                                placeholder="Enter last name" 
+                                                required="required" data-errmessage="Please Enter Last Name" 
+                                                data-character="character" charmessage="Last Name should contain only letters">
+                                            <span id="chklname" style="color: red;"></span>
+                                        </div>
+
+                                        <!-- Gender -->
+                                        <div class="col-md-12 valradio" style="padding-top: 45px;" data-radio="radio" data-errrdomessage="Please Select Gender">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender" id="rdomale"
+                                                    value="male" style="margin-right: 10px;">
+                                                <label class="form-check-label" for="male">
+                                                    Male
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="rdofemale" value="female" style="margin-right: 10px;">
+                                                <label class="form-check-label" for="female">
+                                                    Female
+                                                </label>
+                                            </div>
+                                            <span id="chkgender" style="color: red;"></span>
+                                        </div>
+
+                                        <!-- State & PostCode -->
+                                        <div class="container-fluid" style="padding-top: 30px;">
+                                            <div class="row">
+                                                <div class="col">
+
+                                                    <!-- State -->
+                                                    <div class="form-group col-md-12">
+                                                        <label for="lblstate">State:-</label>
+                                                        <input type="text" class="form-control" id="txtstate"
+                                                            placeholder="Enter State" required="required" data-errmessage="Please Enter The State" 
+                                                            data-character="character" charmessage="State Should Only Contain Character">
+                                                        <span id="chkstate" style="color: red;"></span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col">
+
+                                                    <!-- Postcode -->
+                                                    <div class="form-group col-md-12">
+                                                        <label for="postcode">Postcode:-</label>
+                                                        <input type="text" class="form-control" id="txtpostcode"
+                                                            placeholder="Enter Postcode" required="required" data-errmessage="Please Enter The Statecode" data-number="number" nummessage="Only Contain Number">
+                                                        <span id="chkpostcode" style="color: red;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobno & Email -->
+                                        <div class="container-fluid" style="padding-top: 72px;">
+                                            <div class="row">
+                                                <div class="col">
+
+                                                    <!-- Mobile No -->
+                                                    <div class="form-group col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="mobileNo">Mobile No:-</label>
+                                                            <input type="tel" class="form-control" id="txtmobno"
+                                                                placeholder="Enter mobile number" required="required" data-errmessage="Please Enter Mobile Number" data-number="number" nummessage="Only Contain Number">
+                                                            <span id="chkmobno" style="color: red;"></span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="col">
+
+                                                    <!-- Email -->
+                                                    <div class="form-group col-md-12">
+                                                        <label for="email">Email:-</label>
+                                                        <input type="email" class="form-control" id="txtemail"
+                                                            placeholder="Enter email" 
+                                                            required="required" data-errmessage="Please Enter Email Address"
+                                                            data-email="email" emailmessage="Please Enter Valid Email Address">
+                                                        <span id="chkemail" style="color: red;"></span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Second Col Section End (Person Details)-->
+                                    <!-- ==================================== -->
+                                </div>
+                            </div>
+                            <!-- Person Detail Section End -->
+
+                        </div>
+
+                    </div>
+                    <!-- ==================== -->
+                    <!-- First Accordin End -->
+                    <!-- =================== -->
+
+                    <!-- ================== -->
+                    <!-- Second Accrodin Start -->
+                    <!-- ================== -->
+                    <div style="margin-top: 30px;">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-radius: 100px;">
+                                    Your Employee Details
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <!-- Employee Detail Section Start -->
+                                <div class="container-fluid" style="margin:10px;">
+                                    <div class="row">
+
+                                        <!-- Currnet Occupation -->
+                                        <div>
+                                            <div>
+                                                <label for="lbloccupation">Current Occupation/Classification:-</label>
+                                                <input type="text" class="form-control" id="txtoccupation"
+                                                    placeholder="(eg.Labourer,Carpenter,Bricklayer,etc.)" required="required" data-errmessage="Please Enter Current Occupation" 
+                                                    data-character="character" charmessage="Occupation should contain only letters">
+                                                <span id="chkoccupation" style="color: red;"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- For Radio Button (Emp Detail) -->
+                                        <div style="padding-top: 20px;">
+                                            <div class="form-group valradio" data-radio="radio" data-errrdomessage="Please Select Atleast One">
+                                                <label style="padding-right: 15px;">Are You An:-</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="apprentice"
+                                                        id="chkapprentice" name="rdoposition">
+                                                    <label class="form-check-label" for="apprentice">
+                                                        Apprentice
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        value="workingDirector" id="chkworkingdirector" name="rdoposition">
+                                                    <label class="form-check-label" for="workingDirector">
+                                                        Working Director
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="partner"
+                                                        id="chkpartner" name="rdoposition">
+                                                    <label class="form-check-label" for="partner">
+                                                        Partner
+                                                    </label>
+                                                </div>
+                                                <span id="chkposition" style="color: red;"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Current Employeer -->
+                                        <div style="padding-top: 20px;">
+                                            <div class="form-group">
+                                                <label for="lblcurrentemp">Current Employeer:</label>
+                                                <input type="text" class="form-control" id="txtcurrentemp"
+                                                    placeholder="Enter Current Employee name" required="required" data-errmessage="Please Enter Current Employeer" 
+                                                    data-character="character" charmessage="Current Emp Name should contain only letters">
+                                                <span id="chkcurrentemp" style="color: red;"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Address & Postcode -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <!-- Address -->
+                                            <div style="padding-top: 20px;">
+                                                <div class="form-group">
+                                                    <label for="lblempaddress">Address Of Employeer:-</label>
+                                                    <textarea class="form-control" id="txtempaddress" rows="3"
+                                                        placeholder="Enter Employee Address" required="required" data-errmessage="Please Enter Address Of Employeer"></textarea>
+                                                    <span id="chkempaddress" style="color: red;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Postcode -->
+                                            <div style="padding-top: 21px;"></div>
+                                            <div class="form-group">
+                                                <label for="lblpostcode">Postcode:-</label>
+                                                <input type="text" class="form-control" id="txtemppostcode"
+                                                    placeholder="Enter Postcode" required="required" data-errmessage="Please Enter The Postcode" data-number="number" nummessage="Only Contain Number">
+                                                <span id="chkemppostcode" style="color: red;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone & Mobno -->
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <!-- Phone No -->
+                                            <div class="form-group col-md-12">
+                                                <div class="form-group">
+                                                    <label for="lblphoneno">Phone No:-</label>
+                                                    <input type="tel" class="form-control" id="txtphoneno"
+                                                        placeholder="Enter Phone Number" required="required" data-errmessage="Please Enter Phone No" data-number="number" nummessage="Only Contain Number">
+                                                    <span id="chkphoneno" style="color: red;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Mob No -->
+                                            <div class="form-group col-md-12">
+                                                <div class="form-group">
+                                                    <label for="lblmobno">Mobile No:-</label>
+                                                    <input type="tel" class="form-control" id="txtempmobno"
+                                                        placeholder="Enter Mobile Number" required="required" data-errmessage="Please Enter Mobile Number" data-number="number" nummessage="Only Contain Number">
+                                                    <span id="chkempmobno" style="color: red;"></span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Start Date With Employeer -->
+                                    <div style="padding-top: 21px;">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group col-md-12">
+                                                    <label for="lblstartdate">Start Date With Employeer:-</label>
+                                                    <input type="date" class="form-control" id="calstartDate" required="required" data-errmessage="Please Select Start  Date">
+                                                    <span id="chkstartdate" style="color: red;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Employee Detail Section End -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- =================== -->
+                    <!-- Second Accordin End -->
+                    <!-- =================== -->
+
+                    <!-- ================== -->
+                    <!-- Thrid Accordin Start -->
+                    <!-- ================== -->
+                    <div style="margin-top: 30px;">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border-radius: 100px;">
+                                    Interstate Registration Details
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="form-group valradio" style="margin-top: 20px;" data-radio="radio" data-errrdomessage="Please Select Atleast One">
+
+                                    <!-- Check For Yes Or No -->
+                                    <label for="registeredState" style="padding-right: 10px; padding-left: 20px;">Are
+                                        you
+                                        registered in another state?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="registeredState" id="yes"
+                                            value="yes" required>
+                                        <label class="form-check-label" for="yes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="registeredState" id="no"
+                                            value="no" required>
+                                        <label class="form-check-label" for="no">
+                                            No
+                                        </label>
+                                    </div>
+                                    <span id="chkregisteredstate" style="color: red;"></span>
+                                </div>
+
+                                <!-- All Over State & Registration Detail -->
+                                <div class="form-group" id="stateDetails">
+                                    <div class="row">
+                                        <div class="col">
+
+                                            <div>
+                                                <label for="" style="padding-right: 10px; padding-left: 20px;">If yes,
+                                                    please
+                                                    provide details below:</label>
+                                            </div>
+
+                                            <!-- First State No & Registration Start -->
+                                            <div class="container-fluid" style="padding-top: 20px;">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- State No -->
+                                                        <div class="form-group col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="state">State:</label>
+                                                                <input type="text" class="form-control" id="txtstate1"
+                                                                    placeholder="Enter state" required="required" data-errmessage="Please Enter The State" 
+                                                                    data-character="character" charmessage="State should contain only letters">
+                                                                <span id="chkstate1" style="color: red;"></span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <!-- Registration Number -->
+                                                        <div class="form-group col-md-12">
+                                                            <label for="registrationNumber">Registration Number:</label>
+                                                            <input type="text" class="form-control" id="txtregno1"
+                                                                placeholder="Enter registration number" required="required" data-errmessage="Please Enter The Registration Number" data-number="number" nummessage="Only Contain Number">
+                                                            <span id="chkregno1" style="color: red;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- First Registration & State No End -->
+
+                                            <!-- Third State No & Registration Start -->
+                                            <div class="container-fluid" style="padding-top: 20px;">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Signature -->
+                                                        <div class="form-group col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="state">Signature:</label>
+                                                                <input type="text" class="form-control" id="txtsignature"
+                                                                    placeholder="Enter Signature" required="required" data-errmessage="Please Enter The Signature" 
+                                                                    data-character="character" charmessage="Signature should contain only letters">
+                                                                <span id="chksignature" style="color: red;"></span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <!-- Date -->
+                                                        <div class="form-group col-md-12">
+                                                            <label for="registrationNumber">Date</label>
+                                                            <input type="date" class="form-control" id="caldate" required="required" data-errmessage="Please Select The Date" data-calender="calender" calmessage="Please Select Start Date">
+                                                            <span id="chkdate" style="color: red;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Third Registration & State No End -->
+
+
+                                        </div>
+
+                                        <div class="col">
+
+                                            <!-- Second State No & Registration Start -->
+                                            <div class="container-fluid" style="padding-top: 43px;">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- State No -->
+                                                        <div class="form-group col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="state">State:</label>
+                                                                <input type="text" class="form-control" id="txtstate2"
+                                                                    placeholder="Enter state">
+                                                                <span id="chkstate2" style="color: red;"></span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <!-- Registration Number -->
+                                                        <div class="form-group col-md-12">
+                                                            <label for="registrationNumber">Registration Number:</label>
+                                                            <input type="text" class="form-control" id="txtregno2"
+                                                                placeholder="Enter registration number">
+                                                            <span id="chkregno2" style="color: red;"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Second State No & Registration End -->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===================== -->
+                    <!-- Third Accordin End -->
+                    <!-- =================== -->
+
+                </div>
+                <div style="display: flex; justify-content: center; padding-top: 20px; padding-left: 50px;">
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="Register.ValidateAllControl()">Submit</button>
+                    <button type="reset" class="btn btn-outline-success" style="margin-left: 20px;">Reset</button>
+                </div>
+                <!-- Accordin End -->
+                </form>
+            </div>
+            <!-- Display Data -->
+            
+            <div id="tableval">
+                <!-- Person Detail -->
+                <div style="padding-top: 20px; padding-left: 20px; padding-right: 25px;">
+                    <h3 style="text-align: center;">Person Details</h3>
+                    <table class="table table-bordered" id="personaldetail">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Date of Birth</th>
+                                <th>Address</th>
+                                <th>Suburb</th>
+                                <th>Gender</th>
+                                <th>State</th>
+                                <th>Postcode</th>
+                                <th>Mobile No</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data rows will go here -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Person Detail End -->
+            
+                <!-- Employee Detail Start-->
+                <div style="padding-top: 20px;  padding-left: 20px; padding-right: 25px;">
+                    <h3 style="text-align: center;">Employee Details</h3>
+                    <table class="table table-bordered" id="employeedetail">
+                        <thead>
+                            <tr>
+                                <th>Current Occupation</th>
+                                <th>Current Position</th>
+                                <th>Current Employer</th>
+                                <th>Address Of Employer</th>
+                                <th>Postcode</th>
+                                <th>Phone No</th>
+                                <th>Mobile No</th>
+                                <th>Start Date Of Employment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data rows will go here -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Employee Detail End -->
+            
+                <!-- Registration Detail Start -->
+                <div style="padding-top: 20px;  padding-left: 20px; padding-right: 25px;">
+                    <h3 style="text-align: center;">Registration Details</h3>
+                    <table class="table table-bordered" id="registrationdetail">
+                        <thead>
+                            <tr>
+                                <th>State</th>
+                                <th>Registration Number</th>
+                                <th>State</th>
+                                <th>Registration Number</th>
+                                <th>Signature</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data rows will go here -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Registration Detail End -->
+
+                <div id="btnback" style="text-align: center;">
+                    <!-- <button type="button" class="btn btn-outline-danger" onclick="Register.BackToForm()">Back To Form</button> -->
+                </div>
+            </div>
+            
+        
+    </div>
+    
+
+    
+    <!-- </div> -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./Index.js"></script>
+</body>
+
+</html>
